@@ -1,16 +1,16 @@
 const counterEl = document.querySelector('#counter');
 const arrButtons = counterEl.querySelectorAll('#counter button');
-const decrement = arrButtons[0];
-const increment = arrButtons[1];
-const value = counterEl.querySelector('#value');
+const decrementEl = arrButtons[0];
+const incrementEl = arrButtons[1];
+const valueEl = counterEl.querySelector('#value');
 let counterValue = 0;
 function onIncButtonClick() {
   counterValue += 1;
-  value.textContent = counterValue;
+  valueEl.textContent = counterValue;
 }
 function onDecrButtonClick() {
   counterValue -= 1;
-  value.textContent = counterValue;
+  valueEl.textContent = counterValue;
 }
-increment.addEventListener('click', onIncButtonClick);
-decrement.addEventListener('click', onDecrButtonClick);
+incrementEl.addEventListener('click', onIncButtonClick);
+decrementEl.addEventListener('click', onDecrButtonClick);
