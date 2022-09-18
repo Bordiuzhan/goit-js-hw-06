@@ -8,9 +8,12 @@ const ingredients = [
 ];
 
 const elementsMainEl = document.querySelector('#ingredients');
-ingredients.map((ingredient) => {
-  const elementOfIng = document.createElement('li');
-  elementOfIng.textContent = ingredient;
+
+const newIngredients = ingredients.map((ingredient) => {
+  let elementOfIng = document.createElement('li');
   elementOfIng.classList.add('item');
-  elementsMainEl.prepend(elementOfIng);
+  elementOfIng.textContent = ingredient;
+  console.log(elementOfIng.textContent);
+  return elementOfIng;
 });
+elementsMainEl.prepend(...newIngredients);
