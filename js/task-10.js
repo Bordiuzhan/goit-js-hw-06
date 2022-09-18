@@ -18,6 +18,7 @@ function onValue() {
 }
 function createBoxes(amount) {
   let value = 30;
+  elementsString = '';
   for (let i = 0; i < amount; i += 1) {
     elementsString += `<div style="background-color: ${getRandomHexColor()}; width: ${value}px; height:  ${value}px"></div>`;
     value += 10;
