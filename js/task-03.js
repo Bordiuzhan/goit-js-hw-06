@@ -17,9 +17,5 @@ const mainListEl = document.querySelector('.gallery');
 
 const listImag = images
   .map((img) => `<li><img src=${img.url} alt=${img.alt} width=600></li>`)
-  .join();
+  .join('');
 mainListEl.insertAdjacentHTML('afterbegin', listImag);
-mainListEl.style.display = 'flex';
-mainListEl.style.flexDirection = 'column';
-mainListEl.style.alignItems = 'center';
-mainListEl.style.listStyle = 'none';
